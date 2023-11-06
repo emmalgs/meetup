@@ -293,75 +293,75 @@ describe('Meetup', () => {
     expect(meetup(2013, 3, 'fourth', 'Monday')).toEqual(new Date(2013, 2, 25));
   });
 
-  xtest('fourth Monday of April 2013', () => {
+  test('fourth Monday of April 2013', () => {
     expect(meetup(2013, 4, 'fourth', 'Monday')).toEqual(new Date(2013, 3, 22));
   });
 
-  xtest('fourth Tuesday of May 2013', () => {
+  test('fourth Tuesday of May 2013', () => {
     expect(meetup(2013, 5, 'fourth', 'Tuesday')).toEqual(new Date(2013, 4, 28));
   });
 
-  xtest('fourth Tuesday of June 2013', () => {
+  test('fourth Tuesday of June 2013', () => {
     expect(meetup(2013, 6, 'fourth', 'Tuesday')).toEqual(new Date(2013, 5, 25));
   });
 
-  xtest('fourth Wednesday of July 2013', () => {
+  test('fourth Wednesday of July 2013', () => {
     expect(meetup(2013, 7, 'fourth', 'Wednesday')).toEqual(
       new Date(2013, 6, 24),
     );
   });
 
-  xtest('fourth Wednesday of August 2013', () => {
+  test('fourth Wednesday of August 2013', () => {
     expect(meetup(2013, 8, 'fourth', 'Wednesday')).toEqual(
       new Date(2013, 7, 28),
     );
   });
 
-  xtest('fourth Thursday of September 2013', () => {
+  test('fourth Thursday of September 2013', () => {
     expect(meetup(2013, 9, 'fourth', 'Thursday')).toEqual(
       new Date(2013, 8, 26),
     );
   });
 
-  xtest('fourth Thursday of October 2013', () => {
+  test('fourth Thursday of October 2013', () => {
     expect(meetup(2013, 10, 'fourth', 'Thursday')).toEqual(
       new Date(2013, 9, 24),
     );
   });
 
-  xtest('fourth Friday of November 2013', () => {
+  test('fourth Friday of November 2013', () => {
     expect(meetup(2013, 11, 'fourth', 'Friday')).toEqual(
       new Date(2013, 10, 22),
     );
   });
 
-  xtest('fourth Friday of December 2013', () => {
+  test('fourth Friday of December 2013', () => {
     expect(meetup(2013, 12, 'fourth', 'Friday')).toEqual(
       new Date(2013, 11, 27),
     );
   });
 
-  xtest('fourth Saturday of January 2013', () => {
+  test('fourth Saturday of January 2013', () => {
     expect(meetup(2013, 1, 'fourth', 'Saturday')).toEqual(
       new Date(2013, 0, 26),
     );
   });
 
-  xtest('fourth Saturday of February 2013', () => {
+  test('fourth Saturday of February 2013', () => {
     expect(meetup(2013, 2, 'fourth', 'Saturday')).toEqual(
       new Date(2013, 1, 23),
     );
   });
 
-  xtest('fourth Sunday of March 2013', () => {
+  test('fourth Sunday of March 2013', () => {
     expect(meetup(2013, 3, 'fourth', 'Sunday')).toEqual(new Date(2013, 2, 24));
   });
 
-  xtest('fourth Sunday of April 2013', () => {
+  test('fourth Sunday of April 2013', () => {
     expect(meetup(2013, 4, 'fourth', 'Sunday')).toEqual(new Date(2013, 3, 28));
   });
 
-  xtest('last Monday of March 2013', () => {
+  test('last Monday of March 2013', () => {
     expect(meetup(2013, 3, 'last', 'Monday')).toEqual(new Date(2013, 2, 25));
   });
 
