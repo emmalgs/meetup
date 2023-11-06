@@ -11,11 +11,16 @@ const DayKey = [
 export const meetup = (year, month, descriptor, weekday) => {
   let solution;
   let firstDay = new Date(year, month - 1, 1).getDay();
-  let daysToAdd = DayKey.indexOf(weekday) + 7 - firstDay;
+  let daysToAdd = (DayKey.indexOf(weekday) + 7 - firstDay) + 1;
   if (descriptor === "first") {
     solution = new Date(year, month - 1, 1 + daysToAdd);
   } else if (descriptor === "teenth") {
-    solution = new Date(year, month - 1, 1 + daysToAdd + 7);
+    const teenthDays = daysToAdd + 7;
+    if ((teenthDays) < 13) {
+      solution = new Date(year, month - 1, teenthDays + 7);
+    } else {
+      solution = new Date(year, month - 1, teenthDays);
+    }
   }
   return solution;
 };
