@@ -39,7 +39,7 @@ const findDay = (descriptor, daysToAdd, year, month, weekday) => {
     nextMonth.setDate(nextMonth.getDate() - 1);
     const lastWeekDay = nextMonth.getDay();
     const lastDay = nextMonth.getDate();
-    if (lastWeekDay > DayKey.indexOf(weekday)) {
+    if (lastWeekDay >= DayKey.indexOf(weekday)) {
       day = lastDay - (lastWeekDay - DayKey.indexOf(weekday));
     } else {
       day = lastDay - (lastWeekDay + 7 - DayKey.indexOf(weekday));
