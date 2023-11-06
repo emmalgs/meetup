@@ -16,13 +16,9 @@ export const meetup = (year, month, descriptor, weekday) => {
 };
 
 const addDays = (firstDay, weekday) => {
-  let daysToAdd;
-  if (weekday >= firstDay) {
-    daysToAdd = (weekday - firstDay) + 1;
-  } else {
-    daysToAdd = (weekday + 7 - firstDay) + 1;
-  }
-  return daysToAdd;
+  return weekday >= firstDay
+  ? (weekday - firstDay) + 1
+  : (weekday + 7 - firstDay) + 1;
 }
 
 const findDay = (descriptor, daysToAdd, year, month, weekday) => {
