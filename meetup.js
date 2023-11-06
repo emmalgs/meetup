@@ -9,17 +9,18 @@ const DayKey = [
 ];
 
 export const meetup = (year, month, descriptor, weekday) => {
+  const weekdayIndex = DayKey.indexOf(weekday);
   const firstDay = new Date(year, month - 1, 1).getDay();
-  const daysToAdd = addDays(firstDay, weekday);
+  const daysToAdd = addDays(firstDay, weekdayIndex);
   return new Date(year, month - 1, findDay(descriptor, daysToAdd, year, month - 1, weekday));
 };
 
 const addDays = (firstDay, weekday) => {
   let daysToAdd;
-  if (DayKey.indexOf(weekday) >= firstDay) {
-    daysToAdd = (DayKey.indexOf(weekday) - firstDay) + 1;
+  if (weekday >= firstDay) {
+    daysToAdd = (weekday - firstDay) + 1;
   } else {
-    daysToAdd = (DayKey.indexOf(weekday) + 7 - firstDay) + 1;
+    daysToAdd = (weekday + 7 - firstDay) + 1;
   }
   return daysToAdd;
 }
