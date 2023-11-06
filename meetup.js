@@ -12,7 +12,8 @@ export const meetup = (year, month, descriptor, weekday) => {
   const weekdayIndex = DayKey.indexOf(weekday);
   const firstDay = new Date(year, month - 1, 1).getDay();
   const daysToAdd = addDays(firstDay, weekdayIndex);
-  return new Date(year, month - 1, findDay(descriptor, daysToAdd, year, month - 1, weekday));
+  const day = findDay(descriptor, daysToAdd, year, month - 1, weekdayIndex);
+  return new Date(year, month - 1, day);
 };
 
 const addDays = (firstDay, weekday) => {
@@ -36,10 +37,10 @@ const findDay = (descriptor, daysToAdd, year, month, weekday) => {
     nextMonth.setDate(nextMonth.getDate() - 1);
     const lastWeekDay = nextMonth.getDay();
     const lastDay = nextMonth.getDate();
-    if (lastWeekDay >= DayKey.indexOf(weekday)) {
-      day = lastDay - (lastWeekDay - DayKey.indexOf(weekday));
+    if (lastWeekDay >= weekday) {
+      day = lastDay - (lastWeekDay - weekday);
     } else {
-      day = lastDay - (lastWeekDay + 7 - DayKey.indexOf(weekday));
+      day = lastDay - (lastWeekDay + 7 - weekday);
     }
   } else if (descriptor === "teenth") {
     const teenthDays = daysToAdd + 7;
