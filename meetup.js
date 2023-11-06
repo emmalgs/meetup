@@ -11,9 +11,10 @@ const DayKey = [
 export const meetup = (year, month, descriptor, weekday) => {
   let solution;
   const firstDay = new Date(year, month - 1, 1).getDay();
+  console.log(firstDay)
   let daysToAdd;
-  if (firstDay === 0) {
-    daysToAdd = DayKey.indexOf(weekday) + 1
+  if (DayKey.indexOf(weekday) >= firstDay) {
+    daysToAdd = (DayKey.indexOf(weekday) - firstDay) + 1;
   } else {
     daysToAdd = (DayKey.indexOf(weekday) + 7 - firstDay) + 1;
   }
