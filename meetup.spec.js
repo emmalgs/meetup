@@ -85,29 +85,29 @@ describe('Meetup', () => {
     );
   });
 
-  xtest('saturteenth of October 2013', () => {
+  test('saturteenth of October 2013', () => {
     expect(meetup(2013, 10, 'teenth', 'Saturday')).toEqual(
       new Date(2013, 9, 19),
     );
   });
 
-  xtest('sunteenth of May 2013', () => {
+  test('sunteenth of May 2013', () => {
     expect(meetup(2013, 5, 'teenth', 'Sunday')).toEqual(new Date(2013, 4, 19));
   });
 
-  xtest('sunteenth of June 2013', () => {
+  test('sunteenth of June 2013', () => {
     expect(meetup(2013, 6, 'teenth', 'Sunday')).toEqual(new Date(2013, 5, 16));
   });
 
-  xtest('sunteenth of October 2013', () => {
+  test('sunteenth of October 2013', () => {
     expect(meetup(2013, 10, 'teenth', 'Sunday')).toEqual(new Date(2013, 9, 13));
   });
 
-  xtest('first Monday of March 2013', () => {
+  test('first Monday of March 2013', () => {
     expect(meetup(2013, 3, 'first', 'Monday')).toEqual(new Date(2013, 2, 4));
   });
 
-  xtest('first Monday of April 2013', () => {
+  test('first Monday of April 2013', () => {
     expect(meetup(2013, 4, 'first', 'Monday')).toEqual(new Date(2013, 3, 1));
   });
 
